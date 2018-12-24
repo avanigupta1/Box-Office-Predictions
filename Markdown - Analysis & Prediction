@@ -1,8 +1,8 @@
 ---
-# "Analyzing & Predicting US Box Office Opening Weekend Revenue"
-##  "Using Data from 2010-2017, and Predicting That of 2018"
-### "Avani Gupta"
-#### "12/6/2018"
+title: "Analyzing & Predicting US Box Office Opening Weekend Revenue"
+subtitle: "Using Data from 2010-2017, and Predicting That of 2018"
+author: "Avani Gupta"
+date: "12/6/2018"
 output:
   html_document:
     keep_md: true
