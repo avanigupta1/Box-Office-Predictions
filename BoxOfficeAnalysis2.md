@@ -15,7 +15,7 @@ output:
 
 # Section 1: Training Data Analysis and Modeling
 
-##1. Research Question
+## 1. Research Question
 
 Can a combination of distribution, release, and marketing factors predict the opening weekend box office revenue for movies in the United States?
  
@@ -23,7 +23,7 @@ Can a combination of distribution, release, and marketing factors predict the op
 To delve into this question, an exploratory analysis was done, as opposed to a hypothesis-driven one. Additionally, the movie’s budget was not taken into consideration, as the aim of this study was to focus on what, and to what extent, aspects surrounding the perception of a movie result in the audience’s willingness to see it during it’s opening weekend. 
 
 
-##2. Data Description & Dictionary
+## 2. Data Description & Dictionary
 
 
 
@@ -86,7 +86,7 @@ The following data has been aggregated from websites such as BoxOfficeMojo, IMDb
 | Bankability  | Cumulative Sum of ‘Star Scores’ of Director and First Four-Billed Cast-Members | Continuous  |                     |
 
 
-##3. Initial Limitations
+## 3. Initial Limitations
 
 Though the analysis attempts to incorporate a variety of impactful factors, there are strong limitations present, such as:
 
@@ -97,7 +97,7 @@ Though the analysis attempts to incorporate a variety of impactful factors, ther
 - Incomplete representation of all cast and crew in the sum that composes the ‘Bankability’ variable
 
 
-##4. Methods of Analysis
+## 4. Methods of Analysis
 
 
 
