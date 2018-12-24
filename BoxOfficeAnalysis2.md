@@ -234,7 +234,7 @@ The residuals of the final linear model were fairly well vertically-distributed,
 ![](BoxOfficeAnalysis2_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
-##5. Interpretations & Takeaways
+## 5. Interpretations & Takeaways
 
 Using the linear model created above, the observed values in the 800-movie dataset were plotted against the predicted values to get a sense of fit, as seen below: 
 
