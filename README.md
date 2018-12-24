@@ -1,17 +1,14 @@
 # US Weekend Box Office Predictions
-*Predicting opening weekend box office revenue based on a variety of factors, such as genre and Rotten Tomatoes score on the day before film's release.* 
-
-
-The goal of this analysis is to analyze any trends in the top 100 box office opening weekends in the current decade, and expand those trends and learnings to predict future opening weekends.
+*The goal of this analysis is to analyze any trends in the top 100 box office opening weekends in the current decade, and expand those trends and learnings to predict future opening weekends.*
 
 [Full code can be found here](https://github.com/avanigupta1/Box-Office-Predictions/blob/master/Full%20Markdown%20Code), with final report below: 
  
 
 
 
-# Section 1: Training Data Analysis and Modeling
+## Section 1: Training Data Analysis and Modeling
 
-## 1. Research Question
+### 1. Research Question
 
 Can a combination of distribution, release, and marketing factors predict the opening weekend box office revenue for movies in the United States?
  
@@ -19,7 +16,7 @@ Can a combination of distribution, release, and marketing factors predict the op
 To delve into this question, an exploratory analysis was done, as opposed to a hypothesis-driven one. Additionally, the movie’s budget was not taken into consideration, as the aim of this study was to focus on what, and to what extent, aspects surrounding the perception of a movie result in the audience’s willingness to see it during it’s opening weekend. 
 
 
-## 2. Data Description & Dictionary
+### 2. Data Description & Dictionary
 
 
 
@@ -93,7 +90,7 @@ Though the analysis attempts to incorporate a variety of impactful factors, ther
 - Incomplete representation of all cast and crew in the sum that composes the ‘Bankability’ variable
 
 
-## 4. Methods of Analysis
+### 4. Methods of Analysis
 
 
 
@@ -102,11 +99,11 @@ Though the analysis attempts to incorporate a variety of impactful factors, ther
 
 
 
-### *Model Construction*
+#### *Model Construction*
 
 As the response variable of note is continuous, a linear model was chosen to analyze the data. 
 
-### *Regression Assumptions*
+#### *Regression Assumptions*
 
 - **Sample Size:** While it would be more prudent to have a larger set in this sort of analysis, the analysis set consists of 800 movies. 
 
@@ -126,7 +123,7 @@ Regarding the continuous variables, there seemed to be a clear quadratic relatio
 Within the categorical variables, Genre1, Type, Month, and Studio were all extremely varied across sub-categories. Additionally, many interactions seemed present, such as Genre1 and Type, however they were either hindered by under-representation of level-level relationships in the data, or were merely somewhat correlated as opposed to interactive. 
 
 
-### *Linear Modeling*
+#### *Linear Modeling*
 
 After testing out the usability of variables and potential interactions using interaction analysis and ANOVA tests, the final linear model is as follows: 
 
@@ -219,7 +216,7 @@ The final model summary is as follows:
 ## F-statistic: 33.53 on 58 and 741 DF,  p-value: < 2.2e-16
 ```
 
-### *Residuals & Influence Diagnostics*
+#### *Residuals & Influence Diagnostics*
 
 When reviewing influence diagnostics such as Leverage and Cook’s Distance, the 7 outlying points were all within categories that were relatively under-represented in the data (such as Rereleases and Fantasy films). These points were not removed. 
 
@@ -230,7 +227,7 @@ The residuals of the final linear model were fairly well vertically-distributed,
 ![](BoxOfficeAnalysis2_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
-## 5. Interpretations & Takeaways
+### 5. Interpretations & Takeaways
 
 Using the linear model created above, the observed values in the 800-movie dataset were plotted against the predicted values to get a sense of fit, as seen below: 
 
@@ -281,21 +278,21 @@ This also seems problematic, as this may make sense for films only in the lower 
 
 *****
 
-# Section 2: Predictive Modeling for 2018
+## Section 2: Predictive Modeling for 2018
 
 Using the linear model created in the previous section, would it be possible to predict the highest grossing films of 2018?
 
-### *Data Collection*
+#### *Data Collection*
 
 
 Same data methods used to obtain a test set for the year 2018, from Jan 1 to Nov 29. 
 
-### *Limitations* 
+#### *Limitations* 
 
 As 2018 was not present in the Year variable in the training set, 2017 was used in its place within the test set. 
 
 
-### *Results*
+#### *Results*
 
 Differences (observed minus predicted) were used to analyze the model. The absolute value mean of the differences was **11.34 mil**, with a standard deviation of **18.52 mil**. Results below:
 
@@ -305,11 +302,11 @@ Differences (observed minus predicted) were used to analyze the model. The absol
 ![](BoxOfficeAnalysis2_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 
-### *Takeaways*
+#### *Takeaways*
 
 Overperforming films such as Black Panther and Crazy Rich Asians took on social importance during the lead-up to their releases, and became box office juggernauts. That type of groundswell has not been accounted for, and would be extremely difficult to gauge in a long-range forecasting effort.
 
-### *Future Analysis*
+#### *Future Analysis*
 
 As this is a very surface level analysis with an incredibly small sample size, it would be prudent to go deeper into prediction regression and modes of analysis for further inquiry. 
 
@@ -318,18 +315,18 @@ As this is a very surface level analysis with an incredibly small sample size, i
 
 *****
 
-# Section 3: The Rotten Tomatoes Effect
+## Section 3: The Rotten Tomatoes Effect
 
 The film-score aggregator Rotten Tomatoes rose to prominence in 2016, and since then has been accused of being the cause of box-office failures. Is there any merit to these claims? As an off-shoot experiment of the primary analysis, Rotten Tomatoes data has been added into the dataset to analyze this argument. 
 
 
-### *Data*
+#### *Data*
 
 Rotten Tomatoes (RT) aggregates critic and audience reviews of a movie, and sums them to construct a score out of 100. Scores > 60 are classified as “Fresh”, and < 60 are considered “Rotten”. 
 
 For this experiment, RT scores for each movie from 2016 and 2017 were obtained from the day before or of their release.
 
-### *Analysis & Interpretation*
+#### *Analysis & Interpretation*
 
 Two linear models were used to analyze this effect: using RT score as a continuous variable and using the RT classifications categorically. Both variables had significant p-values when predicting opening revenue, approximating that:
 
@@ -360,7 +357,7 @@ Two linear models were used to analyze this effect: using RT score as a continuo
 
 
 
-### *Limitations*
+#### *Limitations*
 
 This particular experiment is based on a small dataset with minimal diagnostics, so much more analysis would need to be done to confidently discuss the merits of this claim.
 
@@ -370,7 +367,7 @@ This particular experiment is based on a small dataset with minimal diagnostics,
 *****
 
 
-### *References*
+#### *References*
 
 
 - Box Office Mojo, accessed 2018, <https://www.boxofficemojo.com/>
