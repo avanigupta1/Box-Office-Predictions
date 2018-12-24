@@ -3,9 +3,8 @@ title: "Analyzing & Predicting US Box Office Opening Weekend Revenue"
 subtitle: "Using Data from 2010-2017, and Predicting That of 2018"
 author: "Avani Gupta"
 date: "12/6/2018"
-output: 
-  pdf_document: 
-    latex_engine: xelatex
+output: rmarkdown::github_document
+  latex_engine: xelatex
 ---
 
 *****
