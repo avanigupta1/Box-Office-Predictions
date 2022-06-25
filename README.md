@@ -1,7 +1,7 @@
 # US Weekend Box Office Predictions
 *The goal of this analysis is to analyze any trends in the top 100 box office opening weekends in the current decade, and expand those trends and learnings to predict future opening weekends.*
 
-[Full code can be found here](https://github.com/avanigupta1/Box-Office-Predictions/blob/master/Full%20Markdown%20Code), with final report below: 
+[Full code can be found here](https://github.com/avanigupta1/Box-Office-Predictions/blob/master/Full%20Markdown%20Code), with final report below (or Medium article [here](https://medium.com/swlh/box-office-predictions-using-r-33de8665fcbf))
  
 
 
